@@ -1,3 +1,4 @@
+#CNN IMPLEMENTATION
 This folder contains a CNN Model for the MNIST dataset using Pytorch.
 NN Architecture:
    Input Image-->Conv-->Max pool-->Conv-->Max pool-->Fully connected-->fc output layer
