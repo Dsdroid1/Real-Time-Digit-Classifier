@@ -13,3 +13,16 @@ We did learn how the convolutions work in forward as well as in backward pass.
 So with that knowledge,we were ready to move on to a NN library.
 
 Thus ,we implemented the MNIST digit recog. via CNN to get a better accuracy(as expected). 
+
+The thrid file(Opencv one) is implemented using CNNs and uses the trained model(stored in the CNN folder) to predict on images.
+The difference?
+We draw those images using 'mouse as a paintbrush' via OpenCV!!!
+
+Gives a pretty good accuracy.One issue which is currently being faced is that while drawing '1',
+if the tilt of 1 is bit more than the vertical on either side(maybe a margin of 5 deg.),then it is predicted as an 8.
+Rest is working fine.
+Also dont use the fancy script to draw the numbers in OpenCV(baseline and tilt at top in 1,middle cut in 7)
+They decrease the prediction accuracy significantly.
+
+
+THE END
