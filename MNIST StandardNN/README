@@ -1,1 +1,17 @@
+This folder contains a 2-layer MNIST Digit Classifier model which has:
+          28*28 Input features
+	        150 Hidden layer nodes 
+	        10 output nodes corresponding to each class
 
+
+It contains the trained parameters W1,b1,W2,b2 saved as .csv files using pandas.
+They provide a 95% accuracy on MNIST datsets(train,dev/test)
+To load them,use pandas.read_csv(PATH,header=None).
+Preferably,store them in a dict() while loading.
+To get more idea on using these trained parameters,refer the 'extern img predict' jupyter file
+It contains the preprocessing required for the MNIST.
+They have mentioned extracting the digit in a (20,20) image about the COM and padding to form a (28,28) image,
+while retaining the same point(physical location changed) as the COM.
+This preprocessing is there in this code, but it is not robust currently.....that it  may not work if the COM is abruptly shifted 
+in the input image,in which case np.pad takes a -ve value,giving an error.
+This can be improved.
