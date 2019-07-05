@@ -1,1 +1,27 @@
+This folder contains a CNN Model for the MNIST dataset using Pytorch.
+NN Architecture:
+   Input Image-->Conv-->Max pool-->Conv-->Max pool-->Fully connected-->fc output layer
+   (28,28)   #filters(3x3)       #filters(5x5)         #features         #features
+                6                    10                   90                10
 
+This model was trained via the MNIST set available through Pytorch,hence does not contain much info about how to deal with images
+in Pytorch.However, a basic idea is to get the set in numpy(or pandas) and then can be converted to torch tensor by
+torch.from_numpy()
+The minibatch can be used via looping over 'batch_size' examples.
+
+This contains 2 models saved.
+One was trained via batch gradient descent,another through minibatch(size=64).
+Both are equally effective(~98%) and have scope of further training.
+
+Loading these models in a different file would require that file to have the class 'Network' declared in 'MNIST CNN' jupyter file.
+Then it can be loaded by torch.load()"Refer the Pytorch docs fro syntax or it is used in the same Jupyter file so check there"
+This is the training file.(contains epochs,etc)
+
+The Second file is for using the trained model on any image and hence contains some preprocessing steps.
+These are important and highly improve the accuracy on new examples not from Mnist dataset as they are somewhat processed in the way
+they would have been in mnist.
+Again the centroid part of the code is not robust(works for digits, if arbitrary image is given it may show error due to -ve value 
+in padding).
+
+THANK YOU FOR PATIENTLY READING THIS
+                
