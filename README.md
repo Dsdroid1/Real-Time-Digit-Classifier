@@ -24,5 +24,11 @@ Rest is working fine.
 Also dont use the fancy script to draw the numbers in OpenCV(baseline and tilt at top in 1,middle cut in 7)
 They decrease the prediction accuracy significantly.
 
+The fourth file is even better than the previous one.It involves drawing the digit with a 'bottlecap'in front of the 
+webcam.Then it predicts which digit was drawn.
+The file has 2 modes for calibrating the 'stylus'('Calibrate') or using previously stored values('Read').It is recommended that calibration is done whenever lighting conditions change for better performance.(In calibration, only the stylus should visible.If noise exists try changing stylus and/or background).
+Further, 2 modes exist for input as well, 'maunal' and 'auto'.The manual mode involves the user to select when an image is complete,when to send this image to predict('SPACE') and when to clear the screen('c').
+The auto mode considers the image to be ready when it detects no stylus(no.of contours with 'conditions' zero).
+It also clears the screen at that instant and simultaneously predicts.Refer the video for better understanding of this part.
 
 THE END
